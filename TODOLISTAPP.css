@@ -1,0 +1,181 @@
+:root{
+  --background:black;
+  --primary-color:black;
+  --secondary-color:#1e1c1c;
+  --accent-color:#9ee8e1;
+  --text-color:white;
+}
+
+*{
+  margin:0;
+  padding: 0;
+  
+}
+html{
+  font-family: geneva;
+  font-size:16pt;
+  color:var(--text-color)
+}
+body{
+  min-height:100vh;
+  padding: 10px;
+  background-color:#040404;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+h1{
+  margin-top:100px;
+  margin-bottom:20px;
+  font-size:3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align:center;
+  color:var(--accent-color)
+}
+.wrapper{
+  width:700px;
+  max-width:100%;
+  display:flex;
+  flex-direction: column;
+  gap:10px
+}
+
+#input{
+  box-sizing:border-box;
+  padding: 12px 20px;
+  width:100%;
+  background: none;
+  border: 2px solid var(--secondary-color);
+  border-radius: 1000px;
+  font:inherit;
+  color:var(--text-color);
+  caret-color: var(--accent-color)
+}
+#input:focus{
+  outline:none;
+}
+form{
+  position: relative
+}
+#add-button{
+  position: absolute;
+  top:0;
+  right:0;
+  background-color: var(--accent-color);
+  height: 100%;
+  padding: 0 30px;
+  border: none;
+  font:inherit;
+  font-weight:600;;
+  color:var(--background);
+    cursor:pointer;
+  border-end-end-radius: 20px;
+  border-start-end-radius: 20px;
+  border-radius: 20px
+}
+.todo{
+  margin-bottom:10px;
+  padding: 0 16px;
+  background-color: var(--secondary-color);
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+}
+.todo .check-text{
+  padding: 15px;
+  padding-right:0;
+  flex-grow:1;
+}
+#delete-button{
+  padding: 3px;
+  background: none;
+  border:none;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color:whitesmoke;
+  transition: 0.5s ease
+}
+#delete-button:hover{
+  color:var(--accent-color)
+}
+
+
+.custom-checkbox{
+  border:2px solid var(--accent-color);
+  border-radius: 50%;
+  min-height: 20px;
+  min-width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.bx-check{
+  color:var(--secondary-color)
+}
+input[type="checkbox"]:checked ~ .custom-checkbox{
+  background-color:#9ee8e1
+}
+input[type="checkbox"]:checked ~ .check-text{
+  text-decoration: line-through;
+  color:gray
+}
+input[type="checkbox"]{
+  display:none
+}
+@media (max-width:500px){
+  html{
+    font-size:12pt;
+  }
+  #add-button{
+    position: unset;
+    width:100%;
+    margin-top:10px;
+    padding:15px;
+    height:auto;
+  }
+  h1{
+    margin-top:15px;
+    font-size:15vw;
+  } 
+  
+}
+
+li{
+  display:block
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>To do list app</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="TODOLISTAPP.css" rel="stylesheet">
+</head>
+</html>
+
+<body>
+
+<h1>Todo app</h1>
+<div class="wrapper">
+<form>
+<input id="input" type="text" placeholder="Add task here..." autocomplete ="off">
+ <button type="button" id="add-button" onclick="addbutton()">ADD</button>
+</form>
+
+<ul id="todo-list">
+<!-- <li id="checklist" class ="todo">
+<input type="checkbox" id="check-1">
+<label class="custom-checkbox" for ="check-1">
+<i class="bx bx-check"></i>
+</label>
+
+<label for ="check-1" class="check-text">
+Todolist project with javascript
+</label>
+
+<button type="button" id="delete-button" onclick="deletebutton()"><i class="bx bx-trash"></i></button>
+</li>
+
+
+<li id="checklist" class ="todo">
+<input type="checkbox" id="check-1">
+<label class="custom-checkbox" for ="check-1">
+<i class="bx bx-check"></i>
+</label>
+
+<label for ="check-2" class="check-text">
+Todolist project with javascript
+</label>
+
+<button id="delete-button"><i class="bx bx-trash"></i></button>
+</li> -->
+</ul>
+
+</div>
+
+<script>
+const TOdolist=document.getElementById("todo-list");
+const inputField=document.getElementById("input");
+
+
+function addbutton(){
+  if (inputField.value.length == 0){
+    window.alert("Please fill in a new task");
+  }else{
+    let li=document.createElement("li");li.innerHTML=`<li class ="todo">
+<input type="checkbox" id="check-1">
+<label class="custom-checkbox" for ="check-1">
+<i class="bx bx-check"></i>
+</label>
+
+<label for ="check-1" class="check-text">
+${inputField.value}
+</label>
+
+<button type="button" id="delete-button" onclick="deletebutton
+
+()"><i class="bx bx-trash"></i></button>
+</li>`;TOdolist.appendChild(li)
+  }
+}
+</script>
+
+
+</body>
